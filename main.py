@@ -16,3 +16,15 @@ app = FastAPI()
 @app.get("/status")
 def status():
     return {"alive": True}
+from fastapi import FastAPI
+from fastapi.responses import FileResponse
+import os
+
+app = FastAPI()
+
+@app.get("/")
+def frontend():
+    return FileResponse(os.path.join(os.getcwd(), "index.html"))
+@app.get("/status")
+def status():
+    return {"alive": True}
