@@ -327,7 +327,8 @@ setInterval(() => {
   const errors = validateState(organism);
   applyStabilityCorrections(organism, errors);
 
-  autoExpand(organism);
+  autoExpand(organism)
+autoBuildUI(organism)
 
   const status = reportStatus(organism);
   console.log("📡 STATUS:", status);
